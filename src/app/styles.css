@@ -1,0 +1,166 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0f0f10;
+  color: #f6f2ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.home-shell,
+.shop-shell {
+  min-height: 100dvh;
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+.home-shell {
+  display: grid;
+  place-items: center;
+}
+
+.hero-card,
+.panel,
+.shop-hero {
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 1.5rem;
+  background: rgb(255 255 255 / 6%);
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 35%);
+}
+
+.hero-card {
+  max-width: 48rem;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.eyebrow {
+  color: var(--brand, #d4af37);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.9;
+}
+
+p,
+address {
+  color: rgb(246 242 234 / 78%);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+address {
+  font-style: normal;
+}
+
+.button,
+button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: var(--brand, #d4af37);
+  color: #111;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.85rem 1.2rem;
+  text-decoration: none;
+}
+
+.shop-shell {
+  --brand: #d4af37;
+  --surface: #111;
+  --text: #f7f2e8;
+  background:
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--brand), transparent 72%),
+      transparent 28rem
+    ),
+    var(--surface);
+  color: var(--text);
+}
+
+.shop-hero,
+.panel {
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.item-card {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 7%);
+  padding: 1rem;
+}
+
+.booking-panel {
+  margin-top: 1rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 38rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  color: rgb(246 242 234 / 86%);
+  font-weight: 700;
+}
+
+input {
+  min-height: 3rem;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 0.8rem;
+  background: rgb(0 0 0 / 25%);
+  color: inherit;
+  font: inherit;
+  padding: 0.75rem 1rem;
+}
+
+input:focus-visible,
+button:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--brand, #d4af37);
+  outline-offset: 3px;
+}
